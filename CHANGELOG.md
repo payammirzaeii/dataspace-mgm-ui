@@ -19,4 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skills `create-mockup`, `build-poc` and `build-feature` for the Dataspace Captain: a feature goes from HTML mockups in `mockups/<feature>/` (shell, tokens, navigation and icons generated from the portal, checked by `mockup.py`) to a proof of concept on mock data and then to the feature connected to its backend module
 - Translations with i18next: every text of the portal is an i18n key in English and German, the shell's namespace `common` bundled and one lazily loaded namespace per feature, a language menu in the header (on phones under All services → Settings), `<html lang>` and `appLocale()` following the language, tests for key parity and missing keys, and the rule for agents and `merge-guard` that every text goes into every supported language (`docs/developers/translations.md`)
 
+### Changed
+
+- `specs/c3-m1/openapi.yaml` and the generated types of `c3-m1-core` follow the backend spec @ `76587a6`: events use the CloudEvents envelope (`specversion`, `time`, `datacontenttype` instead of `eventId`, `eventType`, `occurredAt`)
+
 [Unreleased]: https://github.com/eclipse-tractusx/dataspace-mgm-ui/commits/main
